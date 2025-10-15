@@ -6,15 +6,13 @@ export default function Attendance() {
 
   const handleChecker = (student) => {
     setPresented((prev) =>
-      prev.includes(student)
-        ? prev.filter((name) => name !== student)
-        : [...prev, student]
+      prev.includes(student) ? prev.filter((name) => name !== student) : [...prev, student]
     );
   };
 
   return (
     <div>
-      <h2>Attendance Tracker</h2>
+      <h1>Attendance Registerr</h1>
       <ul>
         {students.map((student) => (
           <li key={student}>
@@ -29,7 +27,7 @@ export default function Attendance() {
           </li>
         ))}
       </ul>
-      <p>Total Present: {presented.length}</p>
+      <p>Total Presented: {presented.length}</p>
     </div>
   );
 };
